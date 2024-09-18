@@ -1,0 +1,186 @@
+/* Reinício básico para remover margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Corpo com uma cor de fundo suave */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho (header) */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 20px;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+/* Classe que será aplicada quando o título estiver visível */
+header h1.show {
+    opacity: 1;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6f61;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header a:hover {
+    background-color: #ff4b2b;
+    transform: scale(1.05);
+}
+
+/* Container centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Estilo para cada "motivo" */
+.motivo {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+    text-align: left;
+}
+
+.motivo h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.motivo p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.motivo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões de resposta */
+.btn-area {
+    margin-top: 20px;
+}
+
+#yes {
+    color: white;
+    background-color: #ff6f61;
+    margin-left: -50%;
+    margin-right: 20px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#yes:hover {
+    background-color: #ff4b2b;
+    transform: scale(1.05);
+    /* Efeito leve de zoom ao passar o mouse */
+}
+
+#not {
+    color: white;
+    position: absolute;
+    background-color: #6c757d;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-width: 100px;
+    /* Garante que o botão "Não" tenha um tamanho mínimo */
+}
+
+#not:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    /* Efeito leve de zoom ao passar o mouse */
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    /* Estilo para cada "motivo" */
+    .motivo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .motivo h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
